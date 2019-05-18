@@ -39,7 +39,7 @@ public class EmployeeController {
 	}
 	
 	//Get an Employee using ID		//Video Minute 34.50
-	@GetMapping("/notes/{id}")
+	@GetMapping("/employees/{id}")
 	public  ResponseEntity<Employee> getEmployeeId(@PathVariable(value="id") Long empId){
 		
 		Employee emp = employeeDAO.findById(empId).orElse(null);

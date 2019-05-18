@@ -2,6 +2,7 @@ package com.springbootcrud.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -16,27 +17,31 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.data.jpa.repository.Temporal;
 
 @Entity
-@Table(name="Employees")
+@Table(name="employees")
 @EntityListeners(AuditingEntityListener.class)
 
 public class Employee {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "emp_id")
+	private Long id;
 	
 	@NotBlank
+	@Column(name = "name")
 	private String name;
 	
 	@NotBlank
+	@Column(name = "designation")
 	private String designation;
 	
 	@NotBlank
+	@Column(name = "expertise")
 	private String expertise;
 	
-	@NotBlank
 	//@Temporal(TemporalType.TIMESTAMP)
 	@LastModifiedDate 
+	@Column(name = "createdAt")
 	private Date createdAt;
 	
 	public long getId() {

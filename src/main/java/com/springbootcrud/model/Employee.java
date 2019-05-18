@@ -8,9 +8,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.data.jpa.repository.Temporal;
 
 @Entity
 @Table(name="Employees")
@@ -32,9 +35,9 @@ public class Employee {
 	private String expertise;
 	
 	@NotBlank
+	//@Temporal(TemporalType.TIMESTAMP)
+	@LastModifiedDate 
 	private Date createdAt;
-	
-	//Getters Setters
 	
 	public long getId() {
 		return id;

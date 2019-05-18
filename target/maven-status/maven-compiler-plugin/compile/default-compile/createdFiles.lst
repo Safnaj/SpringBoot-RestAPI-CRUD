@@ -1,3 +1,5 @@
+com\springbootcrud\controller\EmployeeController.class
 com\springbootcrud\repository\EmployeeRepository.class
 com\springbootcrud\dao\EmployeeDAO.class
+com\springbootcrud\EmployeeApplication.class
 com\springbootcrud\model\Employee.class

@@ -14,9 +14,9 @@ Micro-Service URLs
 JSON Example :
 ```
 {
-	"name":"Noman",
-	"designation":"CyberSec Engineer",
-	"expertise":"Linux Fucker"
+	"name":"Safnaj",
+	"designation":"Software Engineer",
+	"expertise":"Java & Php"
 }
 ```
 
